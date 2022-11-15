@@ -10,7 +10,7 @@ const PostForm = ({create}) => {
    const addNuwPost = (e) => {
       e.preventDefault();
       const newPost = {
-        id: Date.now(),
+        id: Math.floor(Math.random() * 1000),
         title,
         subtitle
       }

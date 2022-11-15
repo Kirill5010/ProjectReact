@@ -20,10 +20,13 @@
    margin-top: 15px;
    justify-content: space-between;
    align-items: center;
-   background-color: rgb(153, 244, 244);
+   background-color: rgb(201, 245, 245);
 }
 .post-enter {
    opacity: 0;
+}
+.post__subtitle {
+   padding-left: 15px;
 }
 .post-enter-active {
    opacity: 1;
