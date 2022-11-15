@@ -1,0 +1,56 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+#root {
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+}
+.App {
+   width: 800px;
+}
+
+.post {
+   display: flex;
+   padding: 15px;
+   border-radius: 10px;
+   border: 2px solid green;
+   margin-top: 15px;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgb(153, 244, 244);
+}
+.post-enter {
+   opacity: 0;
+}
+.post-enter-active {
+   opacity: 1;
+   transition: opacity 500sm ease-in;
+}
+.post-exit {
+   opacity: 1;
+}
+.post-exit-active {
+   opacity: 0;
+   transition: opacity 500sm ease-in;
+}
+.none {
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 200px;
+   border: 2px solid teal;
+   color: teal;
+   font-size: 20px;
+   font-weight: 400;
+}
+.title {
+   color: teal;
+}
+body {
+   background-color: rgba(17, 17, 27);
+}

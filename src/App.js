@@ -1,23 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useMemo, useState } from 'react'
+import PostFilter from './components/PostFilter';
+import PostForm from './components/PostForm';
+import PostList from './components/PostList';
+import MyButton from './components/UI/Button/MyButton';
+import MyModal from './components/UI/Modal/MyModal';
 
+import './styles/App.css'
 function App() {
+  const [posts, setPosts] = useState([
+    {id: 1, title: 'Природа', subtitle: 'Очень крассива'},
+    {id: 2, title: 'Вода', subtitle: 'Вкусная'},
+    {id: 3, title: 'Москва', subtitle: 'Очень крассива'},
+    {id: 4, title: 'Яблоко', subtitle: 'Красное румяное'},
+    {id: 5, title: 'Снег', subtitle: 'Хрустит'},
+    {id: 6, title: 'Пирог', subtitle: 'Яблочный'},
+  ])
+
+const [filter, setFilter] = useState({sort: '', query: ''})
+const [modal, setModal] = useState(false)
+
+const sortedPost = useMemo(()=>{
+  console.log('Отработала')
+
+  if(filter.sort) {
+    return [...posts].sort((a, b)=> a[filter.sort].localeCompare(b[filter.sort]))
+ }
+ return posts
+}, [filter.sort, posts])
+
+const sortedSearchQuery = useMemo(()=>{
+    return sortedPost.filter(post => post.title.toLowerCase().includes(filter.query.toLowerCase()))
+}, [filter.query, sortedPost])
+
+
+const createPost = (newPost) =>{
+    setPosts([...posts, newPost])
+    setModal(false)
+}
+const removePost = (post) => {
+    setPosts(posts.filter(p => p.id !== post.id))
+}
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyButton onClick={()=>setModal(true) }>Создать пост</MyButton>
+      <MyModal show={modal} setShow={setModal}>
+        <PostForm 
+        create={createPost}
+        />
+      </MyModal>
+      <PostFilter
+      filter={filter}
+      setFilter={setFilter}
+      />
+      <PostList 
+      remove={removePost}
+      posts={sortedSearchQuery} 
+      title={'Список постов 1'}
+       />
     </div>
   );
 }

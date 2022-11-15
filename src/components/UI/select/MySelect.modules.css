@@ -1,0 +1,9 @@
+.my-select {
+   padding: 10px;
+   width: 250px;
+   border: 1px solid teal;
+}
+.my-select option {
+   font-size: 14px;
+   font-weight: 600;
+}
