@@ -14,7 +14,7 @@ const PostForm = ({create}) => {
         title,
         subtitle
       }
-      if (title == '' && subtitle == '') {
+      if (title === '' && subtitle === '') {
          return
       } else {
          create(newPost)
