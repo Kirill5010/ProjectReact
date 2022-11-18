@@ -8,12 +8,12 @@ import MyModal from './components/UI/Modal/MyModal';
 import './styles/App.css'
 function App() {
   const [posts, setPosts] = useState([
-    {id: 1, title: 'Природа', subtitle: 'Очень крассива'},
-    {id: 2, title: 'Вода', subtitle: 'Вкусная'},
-    {id: 3, title: 'Москва', subtitle: 'Очень крассива'},
-    {id: 4, title: 'Яблоко', subtitle: 'Красное румяное'},
+    {id: 1, title: 'Природа', subtitle: 'Великолепна'},
+    {id: 2, title: 'Вода', subtitle: 'Чистая'},
+    {id: 3, title: 'Москва', subtitle: 'Лучший город'},
+    {id: 4, title: 'Яблоко', subtitle: 'Красное и сладкое'},
     {id: 5, title: 'Снег', subtitle: 'Хрустит'},
-    {id: 6, title: 'Пирог', subtitle: 'Яблочный'},
+    {id: 6, title: 'Пирог', subtitle: 'Яблоко-вишня'},
   ])
 
 const [filter, setFilter] = useState({sort: '', query: ''})
