@@ -1,8 +1,13 @@
 .myBtn {
    padding: 5px 15px;
-   color: teal;
+   color: rgb(255, 255, 255);
    font-size:  14px;
    background: transparent;
-   border: 1px solid teal;
+   background-color: rgb(121, 8, 170);
+   border: 1px solid rgba(255, 255, 255, 0.523);
+   border-radius: 10px;
    cursor: pointer;
+}
+.myBtn:hover {
+
 }

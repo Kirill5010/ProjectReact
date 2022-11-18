@@ -57,7 +57,7 @@ const removePost = (post) => {
       <PostList 
       remove={removePost}
       posts={sortedSearchQuery} 
-      title={'Список постов 1'}
+      title={'Список постов'}
        />
     </div>
   );

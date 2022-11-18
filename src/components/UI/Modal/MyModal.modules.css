@@ -11,9 +11,9 @@
    padding: 20px;
    background-color: white;
    min-width: 250px;
-   border: 2px solid teal;
+   box-shadow: 0 0 10px 0 white;
    border-radius: 10px;
-   background-color: rgb(153, 244, 244);
+   background-color: rgb(78, 2, 110);
 }
 .my-modal_active {
    display: flex;
