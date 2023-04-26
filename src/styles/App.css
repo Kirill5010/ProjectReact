@@ -16,18 +16,18 @@
    display: flex;
    padding: 15px;
    border-radius: 10px;
-   box-shadow: 0 0 10px 0 white;
+   border: 1px solid white;
    margin-top: 15px;
    justify-content: space-between;
    align-items: center;
-   background-color: rgb(100, 36, 127);
+   background-color: rgb(48, 54, 61);
 }
 .post-enter {
    opacity: 0;
 }
 .post__subtitle {
    padding-left: 15px;
-   color: rgb(255, 255, 255);
+   color: rgb(212, 210, 210);
 }
 .post__title {
    color: rgb(255, 255, 255);
@@ -61,5 +61,5 @@
 }
 body {
    height: 100vh;
-   background: linear-gradient(135deg, rgb(78, 2, 110) 40%, rgb(166, 60, 212));
+   background: linear-gradient(135deg, rgb(0, 0, 0) 40%, rgb(44, 49, 44));
 }

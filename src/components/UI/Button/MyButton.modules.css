@@ -3,11 +3,11 @@
    color: rgb(255, 255, 255);
    font-size:  14px;
    background: transparent;
-   background-color: rgb(121, 8, 170);
+   background-color: rgb(33, 38, 45);
    border: 1px solid rgba(255, 255, 255, 0.523);
    border-radius: 10px;
    cursor: pointer;
 }
-.myBtn:hover {
+/* .myBtn:hover {
 
-}
+} */
